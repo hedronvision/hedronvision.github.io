@@ -6,13 +6,66 @@
 -->
 <html>
 	<head>
-		<title>Hedron Vision</title>
 		<meta charset="utf-8" />
+		<title>Hedron Vision</title>
+		<script type="text/javascript">
+			(function(e, t) {
+				var n = {
+					_q: [],
+					_iq: {}
+				};
+				var r = t.createElement("script");
+				r.type = "text/javascript";
+				r.async = true;
+				r.src = "https://cdn.amplitude.com/libs/amplitude-4.5.2-min.gz.js";
+				r.integrity = "sha384-f1maK8oMrCMNEWGGg3Hx3dMTOQBbXr4e1ZIjB/J0TcgJx5UeE0g5S5PM5BbWPe4E";
+				r.crossOrigin = "anonymous";
+				r.onload = function() {
+					e.amplitude.runQueuedFunctions()
+				};
+
+				var i = t.getElementsByTagName("script")[0];
+				i.parentNode.insertBefore(r, i);
+				function s(e, t) {
+					e.prototype[t] = function() {
+						this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
+						return this
+					}
+				}
+				var d = ["init", "logEvent"];
+				function v(e) {
+					function t(t) {
+						e[t] = function() {
+							e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)))
+						}
+					}
+					for (var n = 0; n < d.length; n++) {
+						t(d[n])
+					}
+				}
+				v(n);
+				n.getInstance = function(e) {
+					e = (!e || e.length === 0 ? "$default_instance" : e).toLowerCase();
+					if (!n._iq.hasOwnProperty(e)) {
+						n._iq[e] = {
+							_q: []
+						};
+						v(n._iq[e])
+					}
+					return n._iq[e]
+				};
+				e.amplitude = n
+			})(window, document);
+
+			var a = amplitude.getInstance();
+			a.init("e4975e5174ed863109b00bb5266a4d0e", null, {includeReferrer: true});
+			a.logEvent("Main Page View");
+		</script>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
+		<!-- If you're reading this, you should consider working with us. Reach out at joinus@hedronvision.com! -->
 		<img src="images/OnAxisRenderRecolor.svg" onload="
 			if (this.spinning) {
 				this.timerPause = function() {
@@ -47,7 +100,7 @@
 		<!-- Header -->
 		<header id="header">
 			<h1>Hedron Vision</h1>
-			<p>Bringing a 3D experience to 2D screens without extra hardware.<br />
+			<p>Bringing a 3D experience to 2D screens without extra hardware<br />
 			</p>
 		</header>
 
@@ -67,8 +120,8 @@
 				<li><a href="mailto:contactus@hedronvision.com?subject=Hello,%20Hedron" target="_blank" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 			</ul>
 			<ul class="copyright">
+				<li>Website Credit: <a href="http://html5up.net">HTML5 UP</a></li>
 				<li>&copy; Hedron Vision.</li>
-				<li>Website Credits: <a href="http://html5up.net">HTML5 UP</a></li>
 			</ul>
 		</footer>
 
