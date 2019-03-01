@@ -75,7 +75,7 @@
 	</head>
 	<body class="is-preload">
 		<!-- If you're reading this, you should consider working with us. Reach out at joinus@hedronvision.com! -->
-		<img src="images/OnAxisRenderRecolor.svg" onload="
+		<img src="/images/OnAxisRenderRecolor.svg" onload="
 			if (this.spinning) {
 				this.timerPause = function() {
 					setTimeout(this.pause.bind(this), 17800/6.0);
@@ -85,13 +85,13 @@
 						this.timerPause();
 					} else { 
 						this.spinning=false;
-						this.src='images/OnAxisRenderRecolor.svg';
+						this.src='/images/OnAxisRenderRecolor.svg';
 					}
 				};
 				this.play = function() {
 					if (!this.spinning) {
 						this.spinning = true;
-						this.src='images/OnAxisAnimationRecolor.svg';
+						this.src='/images/OnAxisAnimationRecolor.svg';
 						this.timerPause();
 					}
 				};
@@ -99,7 +99,7 @@
 				this.onload = undefined;
 			} else {
 				this.spinning = true;
-				this.src = 'images/OnAxisAnimationRecolor.svg';
+				this.src = '/images/OnAxisAnimationRecolor.svg';
 			}"
 			onmousedown="if (this.play) {this.play();}"
 			onmouseover="this.mouseIsOver=true; this.onmousedown()"
@@ -135,6 +135,6 @@
 		</footer>
 
 		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
+		<script src="/assets/js/main.js"></script>
 	</body>
 </html>
