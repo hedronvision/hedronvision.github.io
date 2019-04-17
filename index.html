@@ -75,37 +75,32 @@
 	</head>
 	<body class="is-preload">
 		<!-- If you're reading this, you should consider working with us. Reach out at joinus@hedronvision.com! -->
-		<img src="/images/OnAxisRenderRecolor.svg" onload="
-			if (this.spinning) {
-				this.timerPause = function() {
-					setTimeout(this.pause.bind(this), 17800/6.0);
-				};
-				this.pause = function() {
-					if (this.mouseIsOver) {
-						this.timerPause();
-					} else { 
-						this.spinning=false;
-						this.src='/images/OnAxisRenderRecolor.svg';
-					}
-				};
-				this.play = function() {
-					if (!this.spinning) {
-						this.spinning = true;
-						this.src='/images/OnAxisAnimationRecolor.svg';
-						this.timerPause();
-					}
-				};
-				this.timerPause();
-				this.onload = undefined;
-			} else {
-				this.spinning = true;
-				this.src = '/images/OnAxisAnimationRecolor.svg';
-			}"
-			onmousedown="if (this.play) {this.play();}"
-			onmouseover="this.mouseIsOver=true; this.onmousedown()"
-			onmouseout="this.mouseIsOver=false;"
-			onmouseup="this.onmouseout();"
-			style="width: 200px">
+		<object data="/images/OnAxisAnimationRecolor.svg" type="image/svg+xml" style="width: 200px; height: 200px; filter: drop-shadow(0px 0px 4px #111111); background: url(/images/OnAxisRenderRecolor.svg) center no-repeat" onload="
+			var a = this.contentDocument.children[0];
+			a.pauseAnimations();
+			this.timerPause = function() {
+				setTimeout(this.pause.bind(this), 2983);
+			};
+			this.pause = function() {
+				if (this.mouseIsOver) {
+					this.timerPause();
+				} else {
+					a.pauseAnimations();
+				}
+			}
+			this.play = function() {
+				if (a.animationsPaused()) {
+					this.style.backgroundImage = null;
+					a.unpauseAnimations();
+					this.timerPause();
+				}
+			};
+			setTimeout(this.play.bind(this), 500);
+			a.onmousedown = this.onmouseover.bind(this);
+			a.onmouseup = this.onmouseout.bind(this);"
+			onmouseover="this.mouseIsOver=true; if (this.play) this.play();"
+			onmouseout="this.mouseIsOver=false;">
+		</object>
 		<!-- Header -->
 		<header id="header">
 			<h1>Hedron Vision</h1>
