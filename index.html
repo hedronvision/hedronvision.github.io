@@ -96,11 +96,20 @@
 					a.pauseAnimations();
 				}
 			}
+			this.style.backgroundImage = null;
 			this.play = function() {
 				if (a.animationsPaused()) {
 					this.style.backgroundImage = null;
+					a.setCurrentTime(0);
 					a.unpauseAnimations();
 					this.timerPause();
+				}
+			};
+			document.onvisibilitychange = function() {
+				if (document.visibilityState == 'hidden') {
+					a.setCurrentTime(0);
+				} else {
+					a.pauseAnimations();
 				}
 			};
 			setTimeout(this.play.bind(this), 500);
