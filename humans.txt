@@ -1,0 +1,33 @@
+                                                         _______________
+                                                        /\  ___________ \
+           __ _________  ___  ____  _  __              /  \ \_________/\ \
+          / // / __/ _ \/ _ \/ __ \/ |/ /             / /\ \ \     / /\ \ \
+         / _  / _// // / , _/ /_/ /    /             / / /\ \ \   / / /\ \ \
+        /_//_/___/____/_/|_|\____/_/|_/             / / /__\ \ \_/_/_/__\_\ \
+          _   __________________  _  __            / /_/____\ \______________\
+         | | / /  _/ __/  _/ __ \/ |/ /            \ \ \____/ / ___________  /
+         | |/ // /_\ \_/ // /_/ /    /              \ \ \  / / / \ \ \  / / /
+         |___/___/___/___/\____/_/|_/                \ \ \/ / /   \ \ \/ / /
+                                                      \ \/ / /_____\_\/ / /
+                                                       \  / /_________\/ /
+                                                        \/______________/
+
+================================================================================
+
+Hello there, friend! You've stumbled on Hedron Vision's `humans.txt` [1], a web
+initiative to get to know the humans behind the creation of new technology.
+
+Hedron Vision wouldn't be possible without the contributions and support of many
+people. If you'd like to help us build the future, reach out by sending an email
+to joinus@hedronvision.com or contributing on GitHub [2]!
+
+--------------------------------------------------------------------------------
+
+Christopher Sauer (chris@)
+
+Sam Redmond (sam@)
+
+--------------------------------------------------------------------------------
+
+[1]: http://humanstxt.org/
+[2]: https://github.com/hedronvision/

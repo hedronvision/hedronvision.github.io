@@ -1,0 +1,23 @@
+# robots.txt for Hedron Vision
+# ============================
+#
+# Hey... if you're reading this, you're not a robot! Nevertheless, if you'd like
+# to help us build the future, reach out by emailing joinus@hedronvision.com.
+#
+#                    *-------------*
+#                   ( w e l c o m e )
+#     .-----.    ()  *-------------*
+#     | # # | ()
+#     \ ._. /
+#    __-- --__
+#   .         .
+#   | |  -  | |
+#   | |  =  | |
+#   \.|  -  |./
+#    X       X
+#   /.  /^\  .\
+#  (-*-)   (-*-)
+
+# Allow any robot to access any page.
+User-agent: *
+Disallow:
