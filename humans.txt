@@ -29,5 +29,5 @@ Sam Redmond (sam@)
 
 --------------------------------------------------------------------------------
 
-[1]: http://humanstxt.org/
+[1]: https://humanstxt.org/
 [2]: https://github.com/hedronvision/
