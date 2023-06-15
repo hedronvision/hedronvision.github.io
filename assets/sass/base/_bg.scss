@@ -10,14 +10,14 @@
 		@include vendor('transition', 'opacity #{_duration(bg-fadein)} ease-in-out');
 		height: 100%;
 		left: 0;
-		opacity: 0.25;
+		opacity: 0.375;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 1;
 
 		div {
-			@include vendor('transition', ('opacity #{_duration(bg-transition)} ease', 'visibility #{_duration(bg-transition)}'));
+			@include vendor('transition', ('opacity #{_duration(bg-transition)} ease'));
 			background-size: cover;
 			height: 100%;
 			left: 0;

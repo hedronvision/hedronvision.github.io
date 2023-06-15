@@ -10,7 +10,7 @@
 		margin: 0 0 _size(element-margin) 0;
 
 		.message {
-			@include icon;
+			@include icon(false, solid);
 			@include vendor('transition', (
 				'opacity #{_duration(transition)} ease-in-out',
 				'transform #{_duration(transition)} ease-in-out'
@@ -141,7 +141,7 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
+			@include icon(false, solid);
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;
@@ -157,9 +157,10 @@
 				border: solid _size(border-width) _palette(border);
 				content: '';
 				display: inline-block;
+				font-size: 0.8em;
 				height: (_size(element-height) * 0.6);
 				left: 0;
-				line-height: (_size(element-height) * 0.575);
+				line-height: (_size(element-height) * 0.6);
 				position: absolute;
 				text-align: center;
 				top: 0;
